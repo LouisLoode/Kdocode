@@ -1,0 +1,40 @@
+<include tpl="haut.html" />
+
+			<h2>Payement via Allopass</h2>		
+			<p>Vous êtes sur cette page afin d'effectuer le payement de votre banniére de 125x125px pour le coût total de 1 allopass (<b>{COMMANDE['cout_total_euros']}</b> euros).</p>
+
+<center>
+<div style="width:300px;font-family:Arial,Helvetica,sans-serif;font-size:10px;background-color:#ffffff;color:#000">
+
+ <div style="height:25px;text-align:center">
+  <img src="http://payment.allopass.com/imgweb/script/fr_uk/acces_title.jpg" width="300" height="25" alt="Logo" />
+ </div>
+
+ <div style="height:137px;text-align:center">
+  <img name="acces_top" src="http://payment.allopass.com/acte/scripts/popup/top.apu?ids=189013&amp;idd=515441&amp;lang=fr" width="300" height="137" alt="" />
+ </div>
+
+ <div style="width:300px">
+  <img src="http://payment.allopass.com/imgweb/script/fr_uk/acces_left.jpg" width="79" height="29" alt="" style="float:left" />
+  <a href="javascript:;" onclick="javascript:window.open('http://payment.allopass.com/acte/scripts/popup/access.apu?ids=189013&amp;idd=515441&amp;lang=fr&amp;country=fr','phone','toolbar=0,location=0,directories=0,status=0,scrollbars=0,resizable=0,copyhistory=0,menuBar=0,width=300,height=340');"><img border="0" src="http://payment.allopass.com/imgweb/common/flag_fr.gif" width="35" height="29" alt="FR" title="FR" /></a>
+  <a href="javascript:;" onclick="javascript:window.open('http://payment.allopass.com/acte/scripts/popup/access.apu?ids=189013&amp;idd=515441&amp;lang=fr&amp;country=be','phone','toolbar=0,location=0,directories=0,status=0,scrollbars=0,resizable=0,copyhistory=0,menuBar=0,width=300,height=340');"><img border="0" src="http://payment.allopass.com/imgweb/common/flag_be.gif" width="35" height="29" alt="BE" title="BE" /></a>
+  <a href="javascript:;" onclick="javascript:window.open('http://payment.allopass.com/acte/scripts/popup/access.apu?ids=189013&amp;idd=515441&amp;lang=fr&amp;country=ch','phone','toolbar=0,location=0,directories=0,status=0,scrollbars=0,resizable=0,copyhistory=0,menuBar=0,width=300,height=340');"><img border="0" src="http://payment.allopass.com/imgweb/common/flag_ch.gif" width="35" height="29" alt="CH" title="CH" /></a>
+ </div>
+
+ <form name="APform" action="http://payment.allopass.com/acte/access.apu" method="post" style="text-align:center;clear:both">
+<input type="hidden" name="ids" value="189013" />
+<input type="hidden" name="idd" value="515441" />
+<input type="hidden" name="lang" value="fr" />
+<input type="hidden" name="recall" value="1" />
+
+  <strong>Entrez votre code d'accès - <br />Enter your access code</strong><br />
+  <input type="text" size="8" maxlength="10" value="" name="code[]" style="background-color:#e7e7e7;border:#000080 1px solid;color:#000080;cursor:text;font-family:Arial;font-size:10pt;font-weight:bold;letter-spacing:normal;width:70px;text-align:center;" />
+  <br /><br />
+  <input type="button" name="APsub" value="" onclick="this.form.submit();this.form.APsub.disabled=true;" style="border:0px;margin:0px;padding:0px;width:48px;height:18px;background:url('http://payment.allopass.com/imgweb/common/bt_ok.gif');" /><br />
+ </form>
+ Pour connaître notre solution de micro paiement :
+ <a href="http://fr.allopass.com/" target="_blank">Allopass</a>
+</div>
+</center>
+
+<include tpl="bas.html" />

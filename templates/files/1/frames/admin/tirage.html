@@ -1,0 +1,25 @@
+<include tpl="haut.html" />
+
+			<h2>Effectuer un tirage au sort</h2>	
+			
+	<p style="text-align: right; font-size: 11px;"><a href="admin-accueil.html" title="Revenir à l'accueil">Cliquez ici pour revenir à l'accueil</a></p>
+			     <p>Le formulaire ci-dessous sert à effectuer un tirage au sort parmis les <b>{NBR_PARTICIPANTS}</b> personnes inscries au tirage au sort.</p>
+
+<form action="admin-tirage.html" method="post">
+    <fieldset>
+               <legend>Code Gagnant</legend>
+               <p>Vous devez entrer le code allopass que recevra le gagnant, cette option est obligatoire.</p>
+			   <p>
+                    <label for="code_allopass" class="flabel">Code Allopass : </label><input type="text" name="code_allopass" id="code_allopass"/><br />
+				</p>
+    </fieldset>
+
+            <p class="send">
+			<br />
+                <input type="submit" name="send" value="Effectuer le tirage au sort" />
+            </p>
+     </form>
+	<p style="text-align: right; font-size: 11px;"><a href="admin-accueil.html" title="Revenir à l'accueil">Cliquez ici pour revenir à l'accueil</a></p>
+
+
+<include tpl="bas.html" />

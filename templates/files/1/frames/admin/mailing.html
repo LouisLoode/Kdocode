@@ -1,0 +1,30 @@
+<include tpl="haut.html" />
+
+		<h2>Envois d'un Mailing</h2>
+		
+	<p style="text-align: right; font-size: 11px;"><a href="admin-accueil.html" title="Revenir à l'accueil">Cliquez ici pour revenir à l'accueil</a></p>
+     <p>Le formulaire ci-dessous vous sert à envoyer un mailing.</p>
+
+<form action="admin-mailing.html" method="post">
+
+	  <fieldset>
+               <legend>Nouveautées</legend>
+			    <p>Si vous laissez ce champ vide, aucune news ne sera affichée.</p>
+			   <p>
+                    <label for="textaera" class="flabel">Nouveautées : </label><br />
+					<textarea id="textarea" name="textarea" rows="15" cols="80" style="width: 100%"></textarea>
+               </p>
+      </fieldset>
+      <fieldset>
+               <legend>Valider l'envois du mailing</legend>
+        <p><label for="valide">Valider l'envois du mailing: </label> <input type="checkbox" name="valide" id="valide"/></p>
+      </fieldset>
+
+            <p class="send">
+                <input type="submit" name="send" value="Envoyer le Mailing" />
+            </p>
+     </form>
+	<p style="text-align: right; font-size: 11px;"><a href="admin-accueil.html" title="Revenir à l'accueil">Cliquez ici pour revenir à l'accueil</a></p>
+		
+
+<include tpl="bas.html" />

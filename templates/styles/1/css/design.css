@@ -1,0 +1,351 @@
+/* 	This is an open source XHTML/CSS website template created by Manjeet Singh Sawhney (http://www.manjeetss.com)
+	You can use this template, but a reference to my website (www.manjeetss.com) would be appreciated. If you need any help or would like me to develop a website for you then please contact me via my website or e-mail me at manjeetss@gmail.com
+	
+blue : 00BAFF
+*/
+
+body
+{
+	margin: 0 0 60px 0;
+	padding: 0;
+	background: #fff;
+	font-size: 100%;
+	font-family: Helvetica, Arial, Verdana;
+	color: #666;
+}
+
+img
+{
+	border: 0;
+}
+
+fieldset {
+	 border : 1px solid #c1c1c1;
+	 width: 100%;
+}
+.input {
+    display: none;
+}
+label {
+display: block;
+width: 40%;
+float: left;
+font-weight:bold;
+}
+
+input[type=submit], input[type=button]
+{
+	border: 1px solid #FF0000;
+	background: #FFFFFF;
+}
+
+input[type=submit]:hover, input[type=submit]:focus, input[type=button]:hover, input[type=button]:focus
+{
+	border: 1px dashed #FF0000;
+	cursor:pointer;
+}
+
+input[type=submit]:active, input[type=button]:active
+{
+	border-style:inset;
+}
+
+p.send {
+	text-align:center;
+}
+
+.opt_titre
+{
+	text-align:center;
+	font-weight:bold;
+}
+
+#container
+{
+	margin: 0 auto;
+	width: 800px;
+}
+
+#navbar
+{
+	width: 800px;
+	height: 85px;
+	border-bottom: 2px solid #e72100;
+}
+
+#navleft
+{
+	float: left;
+	width: 300px;
+	height: 90px;
+}
+
+#navleft a
+{
+	color: #e72100;
+	text-decoration: none;	
+}
+
+#navright
+{
+	float: left;
+	width: 500px;
+	height: 100px;
+}
+
+#navright ul
+{
+	margin: 55px 15px 0 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: right;
+	color: #ccc;
+}
+
+#navright ul li
+{
+	display: inline;
+	margin: 0 0 0 10px;	
+}
+
+a
+{
+	text-decoration: underline;
+	color: #e72100;	
+}
+
+a:hover
+{
+	color: red;
+}
+
+#navright ul li a
+{
+	text-decoration: none;
+	color: #999;
+	font-weight: bold;	
+}
+
+#navright ul li a.active
+{
+	text-decoration: none;
+	color: #e72100;
+	font-weight: bold;
+}
+
+#navright ul li a:hover
+{	
+	color: black;
+}
+
+#main
+{
+	width: 800px;
+	line-height: 160%;
+	padding: 15px 0 0 0;
+	border-bottom: 2px solid #e72100;
+}
+
+#main p
+{
+	margin: 0 15px 15px 15px;	
+}
+
+#main ul
+{
+	padding-right: 15px;	
+}
+
+#main h2, h3
+{	
+	margin: 0 0 15px 0;
+	padding: 5px 15px;
+	font-size: 120%;
+	font-weight: normal;
+	color: #e72100;
+	border-bottom: 1px solid #E5E5E5;
+}
+
+#mainright
+{
+	float: left;
+	width: 750px;
+	padding: 0 15px 0 0;	
+	margin-bottom: 15px;
+}
+
+#mainright img.left
+{
+	float: left;
+	border: 1px solid #CDCDCD;
+	padding: 5px;
+	margin: 0 15px 5px 15px;
+}
+
+#mainright img:hover.left
+{
+	border: 1px solid black;
+}
+
+#mainright img.right
+{
+	float: right;
+	border: 1px solid #cdcdcd
+	padding: 5px;
+	margin: 0 15px 5px 15px;
+}
+
+#mainright img:hover.right
+{	
+	border: 1px solid black;
+}
+
+#bottom
+{
+	clear: both;
+	width: 800px;
+}
+
+#footer
+{
+	float: left;
+	width: 800px;
+	height: 50px;
+	color: #999;
+}
+
+#footer p
+{
+	margin: 0;
+	padding: 15px;
+}
+
+#footer a
+{
+	color: #999;
+	text-decoration: none;
+}
+
+#footer a:hover
+{
+	color: #e72100;
+	text-decoration: none;
+}
+
+#footerleft
+{
+	float: left;
+	width: 300px;
+	height: 50px;
+}
+
+#footerright
+{
+	float: left;
+	width: 500px;
+	height: 50px;
+	text-align: right;
+}
+
+#footerleft a, #footerright a
+{
+	font-weight: bold;
+}
+
+#footerleft a:hover, #footerright a:hover
+{
+	color: black;
+}
+
+#reglements {
+	 width : 98%;
+	 height: 250px;
+	 color : #555555;
+	 overflow: auto;
+	 border : 1px dashed #c1c1c1;
+	 padding: 5px;
+}
+
+#menu_onglets
+{
+    
+    list-style-type : none;
+    padding-bottom : 24px; /* à modifier suivant la taille de la police ET de la hauteur de l'onglet dans #onglets li */
+    border-bottom : 1px solid #7ECAED;
+    margin-left : 0;
+}
+#menu_onglets li
+{
+    float : left;
+    height : 25px; /* à modifier suivant la taille de la police pour centrer le texte dans l'onglet */
+    background-color: #F4F9FD;
+    margin : 2px 2px 0 2px !important;  /* Pour les navigateurs autre que IE */
+    margin : 1px 2px 0 2px;  /* Pour IE  */
+    border : 1px dashed #7ECAED;
+}
+#menu_onglets li.active
+{
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+}
+#menu_onglets a
+{
+    display : block;
+    color : #666;
+    text-decoration : none;
+    padding : 4px;
+}
+#menu_onglets a:hover
+{
+    background : #fff;
+}
+#menu_a_onglet
+{
+        border-bottom : 1px dashed #7ECAED;
+        padding-bottom : 25px;
+}
+#menu_onglets
+{
+        position : absolute;
+        border : 1px solid transparent;
+        padding : 0;
+        font : bold 11px;
+        list-style-type : none;
+        left : 50%;
+        margin-top : 0;
+        width : 430px;
+}
+
+.administration
+{
+	text-align:center;
+	font-size: 28px;
+}
+
+table /* Le tableau en lui-même */
+{
+   margin: auto; /* Centre le tableau */
+   width: 100%;
+   border-collapse: collapse; /* Colle les bordures entre elles */
+}
+
+th /* Les cellules d'en-tête */
+{
+
+   color: #666;
+   font-weight: bold;
+   font-size: 16px;
+   padding: 5px;
+   border-left: 2px solid #e72100;
+   border-right: 2px solid #e72100;
+   border-bottom: 2px dashed #e72100;
+}
+
+td /* Les cellules normales */
+{
+   color: #666;
+   border-top: 2px dashed #e72100;
+   border-left: 2px solid #e72100;
+   border-right: 2px solid #e72100;
+   padding: 5px; /* Petite marge intérieure aux cellules pour éviter que le texte touche les bordures */
+}

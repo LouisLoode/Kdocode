@@ -1,0 +1,19 @@
+<include tpl="haut.html" />
+
+<p><img src="images/icones/locked.png" style="float:right;"/>Vous arrivez sur l'espace d'administration du site, vous devez vous identifier avant de pouvoir continuer.<br /><br /><br /></p>		
+<form action="admin-connexion.html" method="post">
+    <fieldset>
+        <legend>Connexion</legend>
+            <p>
+                <label for="pass" class="label_cote">Mot de Passe :</label>
+                <input type="password" name="pass" id="pass" size="25" />
+            </p>
+
+            <p class="send">
+                <input type="submit" name="send" value="Se connecter" />
+            </p>
+
+    </fieldset>
+</form>
+
+<include tpl="bas.html" />

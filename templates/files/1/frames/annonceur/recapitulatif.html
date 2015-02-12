@@ -1,0 +1,41 @@
+<include tpl="haut.html" />
+
+			<h2>Récapitulatif de votre de commande</h2>		
+			<p>Bonjour, voici le récapitulatif de votre commande.</p>
+			<p>Nous pouvons vous joindre grâce à votre adresse email qui est <b>{COMMANDE['contact_email']}</b>.</p>
+			<p>Voici le récapitulatif de votre commande :</p>
+			<table>
+			<thead> <!-- En-tête du tableau -->
+				<tr>
+					<th style="width: 75%;">Commande</th>
+					<th style="width: 12.5%; text-align: center;">Nombre d'affichages</th>
+					<th style="width: 12.5%;">Prix Unitaire</th>
+				</tr>
+			</thead>
+
+			<tbody> <!-- Corps du tableau -->
+				<tr>
+					<td>Espace Publicitaire :
+					<ul>
+						<li><b>Format Publicitaire</b> : {COMMANDE['format']}px</li>
+						<li><b>URL de l'image</b> : {COMMANDE['url_banniere']}</li>
+						<li><b>URL de votre site</b> : {COMMANDE['site_web']}</li>
+					</ul>
+
+					</td>
+					<td style="text-align: center;">{COMMANDE['nbr_affichage']}</td>
+					<td style="text-align: center;">{COMMANDE['prix_unitaire']} Euros</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td style="text-align: center;"><b>Prix TTC</b> :</td>
+					<td style="text-align: center;" colspan="2"><b>{COMMANDE['cout_total_euros']} Euros</b></td>
+				</tr>
+			</tbody>
+		</table>
+
+			<p style="text-align: left; font-size: 11px;"><a href="annonceur-commande.html" title="Revenir à la commande">Cliquez ici pour annuler</a></p>
+			<p style="text-align: center;"><a href="annonceur-payement.html" title="Commander mon Espace">Cliquez ici pour valider votre commande et pour effectuer le payement via <if condition="{$COMMANDE['nbr_affichage']} == 1 && {$COMMANDE['format']} == '125X125'">Allopass<else />Paypal</if>.</a><br /></p>
+
+
+<include tpl="bas.html" />

@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+	<head>
+		<title>{TITLE}</title>
+		
+		<!-- Meta Tags //-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="refresh" content="{TEMPS}; url={REDIRECTION}" />
+		<meta name="robots" content="noindex,nofollow" />
+		<!-- Le CSS //-->
+        <link href="templates/styles/1/css/messages.css" rel="stylesheet" type="text/css" media="screen" />
+		<!-- Le Javascript //-->
+        <script type="text/javascript" src="includes/js/redirection.js"></script>		
+
+	</head>
+	<body class="message" onload="set_tps_lef()"> 
+		<div id="message">
+			<div class="haut"></div>
+			<h1 class="{CLASS_CSS}">{TITLE}</h1>
+			<span class="{CLASS_CSS}"><b>{MESSAGE}</b></span>
+			<p id="redirection">Redirection dans <span id="tps">{TEMPS}</span> seconde<span id="s"></span></a></p>
+			<p id="lien"><a href="{REDIRECTION}" title="Ne pas attendre">Cliquez ici si la redirection ne fonctionne pas ou que vous ne voulez pas attendre</a></p>
+		</div>
+	</body>
+
+</html>

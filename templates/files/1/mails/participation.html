@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
+   <head>
+       <title>Mail de participation</title>
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	   <style type="text/css">
+body
+{
+    width: 72%;
+    margin: auto;
+    margin: 20px; 
+   	background: #fff;
+	font-size: 100%;
+	font-family: Helvetica, Arial, Verdana;
+	color: #666;
+}
+
+a
+{
+	text-decoration: underline;
+	color: #e72100;	
+}
+
+a:hover
+{
+	color: red;
+}
+
+
+/* Les publicités */
+
+#publicites
+{
+   float: left;
+   width: 125px;
+}
+.publicite_125
+{
+   border: 1px solid #E5E5E5;
+   width: 125px;
+   height: 125px;
+   margin-bottom: 5px;
+}
+
+.publicite_468
+{
+   border: 1px solid #E5E5E5;
+   width: 468px;
+   height: 60px;
+   text-align: center;
+}
+
+#publicite_haut_728
+{
+   width: 728px;
+   height: 90px;
+   margin-bottom: 10px;
+   border: 1px solid #E5E5E5;
+}
+
+#publicite_bas_728
+{
+   border: 1px solid #E5E5E5;
+   width: 728px;
+   height: 90px;
+   margin-bottom: 10px;
+   margin-top: 30px;
+}
+
+/* Le corps de la page */
+
+#corps
+{
+   margin-left: 140px;
+   margin-bottom: 20px;
+   padding: 5px;
+   
+   border-top: 2px solid #e72100;
+}
+
+#corps h1, h2
+{
+	margin: 0 0 15px 0;
+	padding: 5px 15px;
+	font-size: 120%;
+	font-weight: normal;
+	color: #e72100;
+	border-bottom: 1px solid #E5E5E5;
+}
+
+
+	   </style>
+   </head>
+ 
+   <body>
+                          <!-- On fait charger les publicitées en premier -->
+<img src="{PUB['1_728X90']['url_image']}" style="display: none;" alt="Publicité 728 haut" />
+
+<img src="{PUB['1_125X125']['url_image']}" style="display: none;" alt="Publicité 125X125 Haut" />
+<img src="{PUB['2_125X125']['url_image']}" style="display: none;" alt="Publicité 125X125 Milieu" />
+<img src="{PUB['3_125X125']['url_image']}" style="display: none;" alt="Publicité 125X125 Bas" />
+
+<img src="{PUB['1_468X60']['url_image']}" style="display: none;" alt="Publicité 468" />
+
+<img src="{PUB['2_728X90']['url_image']}" style="display: none;" alt="Publicité 728 bas" />
+ 
+       <!-- L'en-tête -->
+ 
+       <div id="publicite_haut_728">
+        <a href="{PUB['1_728X90']['url_site']}" target="_blank"><img src="{PUB['1_728X90']['url_image']}" border="0" height="90" width="728" alt="Publicité 728 haut" /></a>
+       </div>
+ 
+       <!-- Les menus -->
+ 
+       <div id="publicites">        
+           <div class="publicite_125">
+               <a href="{PUB['1_125X125']['url_site']}" target="_blank"><img src="{PUB['1_125X125']['url_image']}" border="0" height="125" width="125" alt="Publicité 125X125 haut" /></a>
+           </div>
+       
+           <div class="publicite_125">
+               <a href="{PUB['2_125X125']['url_site']}" target="_blank"><img src="{PUB['2_125X125']['url_image']}" border="0" height="125" width="125" alt="Publicité 125X125 milieu" /></a>
+           </div>    
+		   
+		   <div class="publicite_125">
+               <a href="{PUB['3_125X125']['url_site']}" target="_blank"><img src="{PUB['3_125X125']['url_image']}" border="0" height="125" width="125" alt="Publicité 125X125 bas" /></a>
+           </div>
+       </div>
+ 
+       <!-- Le corps -->
+ 
+       <div id="corps">
+	   <div id="publicite468">
+        <a href="{PUB['1_468X60']['url_site']}" target="_blank"><img src="{PUB['1_468X60']['url_image']}" border="0" height="60" width="468" alt="Publicité 468" /></a>
+       </div>
+	   <center><img src="http://kdocode.com/images/logo.png" alt="Logo" /></center>
+<if condition="{$NEWS} != ''">
+	        <h1>Nouveautée</h1>
+       
+           <p>
+               {NEWS}
+           </p>
+</if>
+           <h1>Votre compte</h1>
+       
+           <p>
+               Bonjour,<br />
+               Vous vous êtes inscrit {MBR['regis_date_inscrit']|FormatHeure} sur KdoCode.com.
+           </p>
+       
+           <h1>Inscription au tirage au sort</h1>    
+           <p>
+               Afin de participer au tirage au sort, vous devez entrer le code suivant :<br />
+			   <center><img src="{__URL_SITE__}/image-{TIMESTAMP_IMG}.png" alt="Code d'inscription" /></center><br />
+			   A cette adresse:<br />
+			   <center><a href="{__URL_SITE__}/inscription-{MBR['regis_id']}.html" target="_blank">{__URL_SITE__}/inscription-{MBR['regis_id']}.html</a></center>
+           </p>
+       </div>
+ 
+       <!-- Le pied de page -->
+ 
+       <div id="publicite_bas_728">
+        <a href="{PUB['2_728X90']['url_site']}" target="_blank"><img src="{PUB['2_728X90']['url_image']}" border="0" height="90" width="728" alt="Publicité 728 bas" /></a>
+       </div>
+ 
+   </body>
+</html>

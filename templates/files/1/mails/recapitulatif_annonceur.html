@@ -1,0 +1,296 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Récapitulatif pour les Annonceurs</title> 
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<!-- Styles //-->
+<style type="text/css">
+body
+{
+
+	padding: 0;
+	background: #fff;
+	font-size: 100%;
+	font-family: Helvetica, Arial, Verdana;
+	color: #666;
+}
+
+img
+{
+	border: 0;
+}
+
+#container
+{
+	width: 100%;
+}
+
+#navbar
+{
+	width: 100%;
+	height: 42px;
+	padding-bottom: 5px;
+	border-bottom: 2px solid #e72100;
+}
+
+#navleft
+{
+	float: left;
+	width: 300px;
+	height: 32px;
+}
+
+
+
+#navright
+{
+	float: left;
+	width: 500px;
+	height: 40px;
+}
+
+#navright ul
+{
+	margin: 15px 15px 0 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: right;
+	color: #ccc;
+}
+
+#navright ul li
+{
+	display: inline;
+	margin: 0 0 0 10px;	
+}
+
+a
+{
+	text-decoration: underline;
+	color: #e72100;	
+}
+
+a:hover
+{
+	color: red;
+}
+
+#navright ul li a
+{
+	text-decoration: none;
+	color: #999;
+	font-weight: bold;	
+}
+
+#navright ul li a.active
+{
+	text-decoration: none;
+	color: #e72100;
+	font-weight: bold;
+}
+
+#navright ul li a:hover
+{	
+	color: black;
+}
+
+#main
+{
+	width: 100%;
+	line-height: 160%;
+	padding: 15px 0 0 0;
+	border-bottom: 2px solid #e72100;
+}
+
+#main p
+{
+	margin: 0 15px 15px 15px;	
+}
+
+#main h2, h3
+{	
+	margin: 0 0 15px 0;
+	padding: 5px 15px;
+	font-size: 120%;
+	font-weight: normal;
+	color: #e72100;
+	border-bottom: 1px solid #E5E5E5;
+}
+
+#mainright
+{
+	float: left;
+	width: 99%;
+	padding: 0 15px 0 0;	
+}
+
+#mainright img.left
+{
+	float: left;
+	border: 1px solid #CDCDCD;
+	padding: 5px;
+	margin: 0 15px 5px 15px;
+}
+
+#mainright img:hover.left
+{
+	border: 1px solid black;
+}
+
+#mainright img.right
+{
+	float: right;
+	border: 1px solid #cdcdcd
+	padding: 5px;
+	margin: 0 15px 5px 15px;
+}
+
+#mainright img:hover.right
+{	
+	border: 1px solid black;
+}
+
+#bottom
+{
+	clear: both;
+	width: 100%;
+}
+
+#footer
+{
+	float: left;
+	width: 100%;
+	height: 50px;
+	color: #999;
+}
+
+#footer p
+{
+	margin: 0;
+	padding: 15px;
+}
+
+#footer a
+{
+	color: #999;
+	text-decoration: none;
+}
+
+#footer a:hover
+{
+	color: #999;
+	text-decoration: none;
+}
+
+#footerleft
+{
+	float: left;
+	width: 30%;
+	height: 50px;
+}
+
+#footerright
+{
+	float: left;
+	width: 70%;
+	height: 50px;
+	text-align: right;
+}
+
+#footerleft a:hover, #footerright a:hover
+{
+	color: #999;
+}
+table /* Le tableau en lui-même */
+{
+   margin: auto; /* Centre le tableau */
+   width: 100%;
+   border-collapse: collapse; /* Colle les bordures entre elles */
+}
+
+th /* Les cellules d'en-tête */
+{
+
+   color: #666;
+   font-weight: bold;
+   font-size: 16px;
+   padding: 5px;
+   border-left: 2px solid #e72100;
+   border-right: 2px solid #e72100;
+   border-bottom: 2px dashed #e72100;
+}
+
+td /* Les cellules normales */
+{
+   color: #666;
+   border-top: 2px dashed #e72100;
+   border-left: 2px solid #e72100;
+   border-right: 2px solid #e72100;
+   padding: 5px; /* Petite marge intérieure aux cellules pour éviter que le texte touche les bordures */
+}
+</style>
+
+</head>
+<body>
+<div id="container">
+	<div id="navbar">
+		<div id="navleft">
+			<a href="http://www.kdocode.com/index.html"><img src="http://www.kdocode.com/images/logo.png" alt="Logo"/></a>
+		</div>
+	</div>
+	<div id="main">
+		<div id="mainright">
+					<h2>Récapitulatif de votre Commande</h2>	
+		<p><img src="http://www.kdocode.com/images/icones/money.png" style="float: right;" alt="Money" />Bonjour,<br />Toute l'équipe de KdoCode.com vous remercie de votre achat publicitaire. Vous vous êtes engagé à respecter notre <a href="http://www.kdocode.com/contrat.html">contrat d'achat</a> (Nous l'avons d'ailleurs copié en bas de page).</p>
+		<p>Vous avez commandé un Espace Publicitaire de <b>{COMMANDE['format']}</b>px qui sera affiché <b>{COMMANDE['nbr_affichage']}</b> fois (Référence: {COMMANDE['reference']}). Vous pouvez voir ci-dessous le tableau récapitulant toute votre commande:</p>
+		<table>
+			<thead> <!-- En-tête du tableau -->
+				<tr>
+					<th style="width: 75%;">Commande</th>
+					<th style="width: 12.5%; text-align: center;">Nombre d'affichages</th>
+					<th style="width: 12.5%;">Prix Unitaire</th>
+				</tr>
+			</thead>
+
+			<tbody> <!-- Corps du tableau -->
+				<tr>
+					<td>Espace Publicitaire ref.{COMMANDE['reference']} :
+					<ul>
+						<li><b>Format Publicitaire</b> : {COMMANDE['format']}px</li>
+						<li><b>URL de l'image</b> : {COMMANDE['url_banniere']}</li>
+						<li><b>URL de votre site</b> : {COMMANDE['site_web']}</li>
+					</ul>
+
+					</td>
+					<td style="text-align: center;">{COMMANDE['nbr_affichage']}</td>
+					<td style="text-align: center;">{COMMANDE['prix_unitaire']} Euros</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td style="text-align: center;"><b>Prix TTC</b> :</td>
+					<td style="text-align: center;" colspan="2"><b>{COMMANDE['cout_total_euros']} Euros</b></td>
+				</tr>
+			</tbody>
+		</table>
+					<h2>Contrat d'achat NoRelay KdoCode.com (extrait)</h2>
+
+			<ol>
+				<li>Votre publicitée doit être obligatoirement en format image et ne doit pas être changée jusqu'a la fin du Nombre d'affichages.</li>
+				<li>Si votre image ne s'affiche pas ou que votre site est inaccessible, nous vous contacterons grâce à l'adresse email que vous avez laissé.</li>
+				<li>Avant la publication de votre publicité, elle sera vérifiée et validée (si elle respecte ce contrat) par nos Administrateurs.</li>
+				<li>En cas de tentative de piratage, votre publicitée sera supprimé sans aucun remboursement, et nous engagerons des poursuites contre vous.</li>
+				<li>Le non respect de ce contrat, nous le droit de supprimer votre commande sans remboursement possible.</li>
+			</ol>
+		</div>
+		<div id="bottom"></div>
+	</div>
+	<div id="footer">
+		<div id="footerleft">
+			<p>Informations complémentaires: <a href="http://www.kdocode.com/">http://www.kdocode.com/</a></p>
+		</div>
+		<div id="footerright">
+			<p>Contact: billing@kdocode.com</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

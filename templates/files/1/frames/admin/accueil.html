@@ -1,0 +1,11 @@
+<include tpl="haut.html" />
+
+			<h2>Accueil de l'Administration</h2>
+			<if condition="{$MAILING_EN_COURS} == false">
+			<p class="administration"><a href="admin-mailing.html" title="Mailing">Envoyer un mailing</a></p>
+			<else />
+			<p class="administration"><a href="admin-tirage.html" title="Tirage au sort">Effectuer un tirage au sort</a></p>
+			</if>
+
+
+<include tpl="bas.html" />

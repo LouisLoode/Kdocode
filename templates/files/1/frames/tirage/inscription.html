@@ -1,0 +1,21 @@
+<include tpl="haut.html" />
+
+			<h2>Inscription au Tirage au sort</h2>
+		<p><img style="float:right;" src="images/icones/gift.png" />Afin de pouvoir gagner votre code allopass, vous devez vous inscrire au tirage au sort et ainsi rejoindre les <b>{NBR_PARTICIPANTS}</b> participant(s) du prochain tirage. Le tirage au sort s'effectuera dans la journée, vous serez obligatoirement informé si vous gagnez un code Allopass.<br /><br /><br /></p>
+		<form action="inscription-{ID}.html" method="post">
+			<fieldset>
+			<p>
+                <label for="email" class="label_cote">Email :</label>
+                <input type="text" name="email" id="code" size="25" />
+            </p>
+			 <p>
+                <label for="code" class="label_cote">Code :</label>
+                <input type="text" name="code" id="code" size="25" />
+            </p>
+            <p class="send">
+                <input type="submit" name="send" value="Participer au prochain Tirage au Sort" />
+            </p>
+			</fieldset>
+		</form>
+
+<include tpl="bas.html" />

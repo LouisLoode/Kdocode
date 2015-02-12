@@ -1,0 +1,65 @@
+<include tpl="haut.html" />
+
+			<h2>Commandez votre espace publicitaire</h2>			
+			     <p>Le formulaire ci-dessous sert à enregistrer votre publicité dans notre base de donnée et donc d'appartaitre dans nos prochains mail. Vous pourrez ensuite voir le prix de votre commande.</p>
+
+<form action="annonceur-commande.html" method="post">
+    <fieldset>
+               <legend>Contact</legend>
+               <p>Ces information servent à vous contacter si nous rencontrons un probléme avec votre banniére.<br /> Afin de respecter votre vie privée, elles ne peuvent être consultées que par un Administrateur.</p>
+			   <p>
+                    <label for="contact_email" class="flabel">Email : </label><input type="text" name="contact_email" id="contact_email"/><br />
+				</p>
+    </fieldset>
+	
+	<fieldset>
+      <legend>Publicité</legend>
+		<p>Ci-dessous, vous pouvez choisir le format de la banniére que vous voulez afficher. <br />Voici nos tarifs:<br :/>
+			<ul>
+			  <li>Format Carré 125px : à partir de 1,80€ TTC (1 code)</li>
+			  <li>Format Bannière 468x60px : à partir de 3,60€ TTC (2 code)</li>
+			  <li>Format Bannière XXL 728x90px : à partir de 5,40€ TTC (3 code)</li>
+			</ul>
+		<b>Ces espaces publicitaires peuvent être payé via allopass à l'unité (pour un mailing), si vous voulez payer une plus grande quantité, vous devez passer par paypal.</b>	
+		</p>
+			<p>Vous pouvez voir la nos espaces publicitaires:</p>
+			<p style="text-align: center;"><a href="images/publicites/espacespub.png" rel="lightbox" title="Espaces de Publicité"><img src="images/publicites/espacespub.png" alt="Espaces de Publicité" width="270" height="219" border="0" /></a></p>
+	        <label for="format" class="flabel">Format choisis : </label>
+					<select id="format" name="format">
+					  <option class="opt_titre" value="aucun" selected="selected">Formats de banniéres</option>
+						<option value="125X125">125x125px</option>
+						<option value="468X60">468x60px</option>
+						<option value="728X90">728x90px</option>
+					</select>
+               </p>
+        <p>L'adresse de votre banniére (ce doit être une image).</p>
+        <p>
+            <label for="url_banniere" class="flabel">URL de la Banniére : </label><input type="text" name="url_banniere" id="url_banniere" />
+        </p>
+        <p>L'adresse de votre site, afin que quand l'utilisateur clique sur la banniére, il se rende sur votre site internet.</p>
+        <p>
+            <label for="site_web" class="flabel">URL de votre Site : </label><input type="text" name="site_web" id="site_web" />
+        </p>
+		<p>Le nombre de mail dans lequel votre banniére doit être affichée. Par défaut 1 seul, laissez cette valeur comme ceci si vous voulez payer par allopass.</p>
+        <p>
+            <label for="nbr_affichage" class="flabel">Nombre d'affichages : </label><input type="text" name="nbr_affichage" id="nbr_affichage" value="1"/>
+        </p>
+      </fieldset>
+
+      <fieldset>
+               <legend>Contrat</legend>
+               <p>Avant d'envoyer votre publicité, vous devez certifier que vous respecterez le Contrat ci-dessous en cochant la case en dessous du contrat.</p>
+               <div id="reglements">
+               <include tpl="frames/divers/contrat.html" />
+               </div>
+               <p><label for="reglement">J'ai lu et j'accepte le contrat</label> <input type="checkbox" name="reglement" id="reglement"/></p>
+      </fieldset>
+
+            <p class="send">
+			<br />
+                <input type="submit" name="send" value="Commander l'espace publicitaire" />
+            </p>
+     </form>
+
+
+<include tpl="bas.html" />

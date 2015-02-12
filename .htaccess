@@ -1,0 +1,32 @@
+
+# On met les pages que l'on va utiliser en cas d'erreur d'apache.
+ErrorDocument 400 /pages/html/400.html
+ErrorDocument 403 /pages/html/403.html
+ErrorDocument 404 /pages/html/404.html
+ErrorDocument 500 /pages/html/500.html
+ErrorDocument 502 /pages/html/502.html
+ErrorDocument 504 /pages/html/504.html
+
+## ## ## ## ## 
+RewriteEngine On 
+
+# Frame de validation
+RewriteRule ^validation-([0-9]+)-([A-Z0-9]+)\.html$ index.php?frame=validation&id=$1&code=$2 [QSA] 
+
+# Image de validation
+RewriteRule ^image-([0-9]+)\.png$ image.php?timestamp=$1
+
+# Frame d'inscription au tirage au sort
+RewriteRule ^inscription-([0-9]+)\.html$ index.php?frame=inscription&id=$1
+
+# Frame d'administration
+RewriteRule ^admin-(accueil|connexion|mailing|tirage)\.html$ index.php?frame=admin&action=$1 [QSA,L] 
+
+# Frame d'annonceurs
+RewriteRule ^annonceur-(accueil|commande|payement)\.html$ index.php?frame=annonceur&action=$1 [QSA,L] 
+RewriteRule ^annonceur-payement\.html?RECALL=([A-Z0-9]+)$ index.php?frame=annonceur&action=payement&RECALL=$1 [QSA,L] 
+RewriteRule ^annonceur-payement\.html?token=([a-zA-Z0-9]+)&PayerID=([a-zA-Z0-9]+)$ index.php?frame=annonceur&action=payement&token=$1&PayerID=$2 [QSA,L] 
+
+# Frames en générales
+RewriteRule ^([a-z0-9_]+)\.html$ index.php?frame=$1 [QSA,L] 
+
